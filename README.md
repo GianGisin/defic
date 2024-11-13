@@ -30,7 +30,7 @@ Refering to a cell which itself has an equation in it will be supported. (exclud
 ### User Interface:
 The table is passed in using pipes
 ```bash
-cat input.csv > python -m defic > output.csv
+cat input.csv | python -m defic > output.csv
 ```
 
 ## FAQ
