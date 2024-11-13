@@ -1,3 +1,11 @@
+import sys
+from .lib import csv
+
+
+def read_stdin() -> list[str]:
+    return [line for line in sys.stdin]
+
+
 def main() -> None:
     pass
 
