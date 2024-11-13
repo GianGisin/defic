@@ -7,6 +7,32 @@ Blatantly taken from [Tsoding](https://www.youtube.com/watch?v=HCAgvKQDJng&t=316
 ## Disclaimer
 I have no idea what I'm doing.
 
+## How it ~~works~~ will work
+### Concept:
+The application will support evaluating equations on a cell based scope for files in the `csv` format. Referencing other cells will be supported. For example:
+
+Input:
+| A | B | C |
+|---|---|---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+| =A1 + B1  | =SUM(A2:C2) | =C1 ^ 2  |
+
+Output:
+| A | B | C |
+|---|---|---|
+| 1 | 2 | 3 |
+| 4 | 5 | 6 |
+| 3 | 15 | 9 |
+
+Refering to a cell which itself has an equation in it will be supported. (excluding circular dependencies)
+
+### User Interface:
+The table is passed in using pipes
+```bash
+cat input.csv > python -m defic > output.csv
+```
+
 ## FAQ
 ### GUI?
 No
